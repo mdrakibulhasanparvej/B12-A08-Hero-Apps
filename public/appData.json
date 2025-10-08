@@ -1,0 +1,362 @@
+[
+  {
+    "image": "https://i.ibb.co.com/1Jtdf4wn/01-Task-Master-Pro.jpg",
+    "title": "TaskMaster Pro",
+    "companyName": "EfficientApps Inc.",
+    "id": 1,
+    "description": "Organize your tasks, set reminders, and boost productivity with TaskMaster Pro. Designed for professionals and students alike.",
+    "size": 45.2,
+    "reviews": 12034,
+    "ratingAvg": 4.6,
+    "downloads": 500000,
+    "ratings": [
+      { "name": "1 star", "count": 340 },
+      { "name": "2 star", "count": 620 },
+      { "name": "3 star", "count": 1200 },
+      { "name": "4 star", "count": 3200 },
+      { "name": "5 star", "count": 6674 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/MxwSg6vg/02-Fit-Track.png",
+    "title": "FitTrack",
+    "companyName": "HealthSync Ltd.",
+    "id": 2,
+    "description": "Track your workouts, monitor progress, and stay motivated with FitTrack. Includes personalized fitness plans and goal tracking.",
+    "size": 38.5,
+    "reviews": 8543,
+    "ratingAvg": 4.2,
+    "downloads": 300000,
+    "ratings": [
+      { "name": "1 star", "count": 210 },
+      { "name": "2 star", "count": 430 },
+      { "name": "3 star", "count": 900 },
+      { "name": "4 star", "count": 2500 },
+      { "name": "5 star", "count": 4503 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/rRLSVydv/03-Photo-Snap.pngs",
+    "title": "PhotoSnap",
+    "companyName": "PixelForge Studios",
+    "id": 3,
+    "description": "Capture stunning photos with advanced filters and editing tools. PhotoSnap makes photography easy and fun for everyone.",
+    "size": 52.1,
+    "reviews": 23012,
+    "ratingAvg": 4.8,
+    "downloads": 1200000,
+    "ratings": [
+      { "name": "1 star", "count": 500 },
+      { "name": "2 star", "count": 800 },
+      { "name": "3 star", "count": 1500 },
+      { "name": "4 star", "count": 6000 },
+      { "name": "5 star", "count": 14212 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/Ldnq7LHv/04-Budget-Buddy.png",
+    "title": "BudgetBuddy",
+    "companyName": "FinanceFlow",
+    "id": 4,
+    "description": "Manage your expenses, set savings goals, and track your financial health with BudgetBuddy. Ideal for personal and family budgeting.",
+    "size": 29.7,
+    "reviews": 6789,
+    "ratingAvg": 4.3,
+    "downloads": 250000,
+    "ratings": [
+      { "name": "1 star", "count": 180 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 700 },
+      { "name": "4 star", "count": 2100 },
+      { "name": "5 star", "count": 3509 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/hxTpcSCK/05-Language-Leap.jpg",
+    "title": "LanguageLeap",
+    "companyName": "GlobalLingua",
+    "id": 5,
+    "description": "Learn new languages with interactive lessons, quizzes, and real-time conversation practice. LanguageLeap supports over 20 languages.",
+    "size": 61.3,
+    "reviews": 15432,
+    "ratingAvg": 4.7,
+    "downloads": 800000,
+    "ratings": [
+      { "name": "1 star", "count": 400 },
+      { "name": "2 star", "count": 600 },
+      { "name": "3 star", "count": 1300 },
+      { "name": "4 star", "count": 4000 },
+      { "name": "5 star", "count": 9132 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/yFcbSXWS/06-Mind-Zen.png",
+    "title": "MindZen",
+    "companyName": "CalmTech",
+    "id": 6,
+    "description": "Relax and meditate with guided sessions, ambient sounds, and breathing exercises. MindZen helps reduce stress and improve sleep.",
+    "size": 48.9,
+    "reviews": 10234,
+    "ratingAvg": 4.5,
+    "downloads": 600000,
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 500 },
+      { "name": "3 star", "count": 1100 },
+      { "name": "4 star", "count": 2900 },
+      { "name": "5 star", "count": 5434 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/KxyVwfpR/07-Recipe-Realm.jpg",
+    "title": "RecipeRealm",
+    "companyName": "KitchenVerse",
+    "id": 7,
+    "description": "Discover thousands of recipes from around the world. RecipeRealm offers step-by-step instructions, videos, and grocery lists.",
+    "size": 35.4,
+    "reviews": 7890,
+    "ratingAvg": 4.4,
+    "downloads": 400000,
+    "ratings": [
+      { "name": "1 star", "count": 220 },
+      { "name": "2 star", "count": 410 },
+      { "name": "3 star", "count": 800 },
+      { "name": "4 star", "count": 2300 },
+      { "name": "5 star", "count": 4160 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/k2ztNLYn/08-code-camp-logo.jpg",
+    "title": "CodeCamp",
+    "companyName": "DevSpark",
+    "id": 8,
+    "description": "Learn to code with interactive challenges, real-world projects, and community support. CodeCamp covers HTML, CSS, JS, Python, and more.",
+    "size": 72.6,
+    "reviews": 19876,
+    "ratingAvg": 4.9,
+    "downloads": 1500000,
+    "ratings": [
+      { "name": "1 star", "count": 600 },
+      { "name": "2 star", "count": 900 },
+      { "name": "3 star", "count": 1800 },
+      { "name": "4 star", "count": 5000 },
+      { "name": "5 star", "count": 11576 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/hxBySYgC/09-Travel-Mate.webp",
+    "title": "TravelMate",
+    "companyName": "WanderWorks",
+    "id": 9,
+    "description": "Plan your trips, book hotels, and explore destinations with TravelMate. Includes travel guides, maps, and local tips.",
+    "size": 58.2,
+    "reviews": 13456,
+    "ratingAvg": 4.6,
+    "downloads": 900000,
+    "ratings": [
+      { "name": "1 star", "count": 350 },
+      { "name": "2 star", "count": 580 },
+      { "name": "3 star", "count": 1200 },
+      { "name": "4 star", "count": 3600 },
+      { "name": "5 star", "count": 7726 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/kY49mv7/10-Note-Nest.webp",
+    "title": "NoteNest",
+    "companyName": "PaperlessTech",
+    "id": 10,
+    "description": "Take notes, organize ideas, and sync across devices. NoteNest supports handwriting, voice memos, and cloud backup.",
+    "size": 42.7,
+    "reviews": 11234,
+    "ratingAvg": 4.3,
+    "downloads": 700000,
+    "ratings": [
+      { "name": "1 star", "count": 280 },
+      { "name": "2 star", "count": 490 },
+      { "name": "3 star", "count": 1000 },
+      { "name": "4 star", "count": 3100 },
+      { "name": "5 star", "count": 5364 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/RGGCWS2B/11-Food-Hunt.webp",
+    "title": "FoodHunt",
+    "companyName": "TastyTech",
+    "id": 11,
+    "description": "FoodHunt helps you discover new restaurants nearby, browse trending dishes, and order your favorites with real-time delivery tracking.",
+    "size": 92,
+    "reviews": 28900,
+    "ratingAvg": 4.5,
+    "downloads": 3100000,
+    "ratings": [
+      { "name": "1 star", "count": 1400 },
+      { "name": "2 star", "count": 1900 },
+      { "name": "3 star", "count": 3100 },
+      { "name": "4 star", "count": 7800 },
+      { "name": "5 star", "count": 14700 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/JwXH4fK4/12-Code-Arena.png",
+    "title": "CodeArena",
+    "companyName": "DevNest",
+    "id": 12,
+    "description": "CodeArena is a coding practice platform featuring daily challenges, contests, and AI feedback to sharpen your programming skills.",
+    "size": 68,
+    "reviews": 17600,
+    "ratingAvg": 4.6,
+    "downloads": 1900000,
+    "ratings": [
+      { "name": "1 star", "count": 520 },
+      { "name": "2 star", "count": 700 },
+      { "name": "3 star", "count": 1500 },
+      { "name": "4 star", "count": 4600 },
+      { "name": "5 star", "count": 9280 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/0j2nrYnC/13-Weather-Cast.png",
+    "title": "WeatherCast",
+    "companyName": "SkyMap Co.",
+    "id": 13,
+    "description": "WeatherCast provides hyper-accurate forecasts, live radar, and severe weather alerts tailored for your exact location.",
+    "size": 59,
+    "reviews": 20400,
+    "ratingAvg": 4.3,
+    "downloads": 2500000,
+    "ratings": [
+      { "name": "1 star", "count": 900 },
+      { "name": "2 star", "count": 1100 },
+      { "name": "3 star", "count": 2300 },
+      { "name": "4 star", "count": 5800 },
+      { "name": "5 star", "count": 10300 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/5QzLZ22/14-Game-Boost.jpg",
+    "title": "GameBoost",
+    "companyName": "SpeedLabs",
+    "id": 14,
+    "description": "Optimize your mobile gaming performance with GameBoost. Reduce lag, free up RAM, and improve FPS instantly with one tap.",
+    "size": 43,
+    "reviews": 18900,
+    "ratingAvg": 4.2,
+    "downloads": 2800000,
+    "ratings": [
+      { "name": "1 star", "count": 1300 },
+      { "name": "2 star", "count": 1600 },
+      { "name": "3 star", "count": 2600 },
+      { "name": "4 star", "count": 5000 },
+      { "name": "5 star", "count": 8400 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/FqwfxVSc/15-Learn-It.png",
+    "title": "LearnIt",
+    "companyName": "EduPro Technologies",
+    "id": 15,
+    "description": "LearnIt offers high-quality online courses, quizzes, and live sessions across coding, design, and business domains.",
+    "size": 115,
+    "reviews": 36700,
+    "ratingAvg": 4.7,
+    "downloads": 4500000,
+    "ratings": [
+      { "name": "1 star", "count": 1400 },
+      { "name": "2 star", "count": 2100 },
+      { "name": "3 star", "count": 3200 },
+      { "name": "4 star", "count": 8900 },
+      { "name": "5 star", "count": 21000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/cfhYQQt/16-Sleep-Sync-16.png",
+    "title": "SleepSync",
+    "companyName": "CalmNest Labs",
+    "id": 16,
+    "description": "SleepSync tracks your sleep cycles, gives relaxation audio, and provides personalized tips for better rest and recovery.",
+    "size": 78,
+    "reviews": 12100,
+    "ratingAvg": 4.5,
+    "downloads": 1600000,
+    "ratings": [
+      { "name": "1 star", "count": 400 },
+      { "name": "2 star", "count": 700 },
+      { "name": "3 star", "count": 1500 },
+      { "name": "4 star", "count": 3900 },
+      { "name": "5 star", "count": 5600 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/FTP64gn/17-Home-Smart-17.png",
+    "title": "HomeSmart",
+    "companyName": "IoTWorks",
+    "id": 17,
+    "description": "Control your smart devices from one app. HomeSmart connects your lights, locks, and appliances securely in one place.",
+    "size": 88,
+    "reviews": 17900,
+    "ratingAvg": 4.4,
+    "downloads": 2200000,
+    "ratings": [
+      { "name": "1 star", "count": 820 },
+      { "name": "2 star", "count": 1100 },
+      { "name": "3 star", "count": 2200 },
+      { "name": "4 star", "count": 4800 },
+      { "name": "5 star", "count": 8980 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/7tfDQW38/18-Book-Verse-18.png",
+    "title": "BookVerse",
+    "companyName": "PageFlow Media",
+    "id": 18,
+    "description": "BookVerse lets you read and share eBooks from thousands of genres. Create reading goals, highlight notes, and join book clubs.",
+    "size": 104,
+    "reviews": 24300,
+    "ratingAvg": 4.8,
+    "downloads": 3200000,
+    "ratings": [
+      { "name": "1 star", "count": 620 },
+      { "name": "2 star", "count": 800 },
+      { "name": "3 star", "count": 1700 },
+      { "name": "4 star", "count": 5400 },
+      { "name": "5 star", "count": 15800 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/Zp5xfrkM/19-Crypto-Track-19.png",
+    "title": "CryptoTrack",
+    "companyName": "FinCube",
+    "id": 19,
+    "description": "Track cryptocurrency prices, set alerts, and view portfolio analytics in real-time. CryptoTrack supports 1000+ coins.",
+    "size": 69,
+    "reviews": 31200,
+    "ratingAvg": 4.3,
+    "downloads": 3900000,
+    "ratings": [
+      { "name": "1 star", "count": 2100 },
+      { "name": "2 star", "count": 2400 },
+      { "name": "3 star", "count": 3700 },
+      { "name": "4 star", "count": 7200 },
+      { "name": "5 star", "count": 15800 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/sJkRtkXs/20-Shop-Square-20.png",
+    "title": "ShopSquare",
+    "companyName": "NextBuy Ltd",
+    "id": 20,
+    "description": "ShopSquare is your one-stop shopping destination with fast delivery, exclusive offers, and smart recommendations.",
+    "size": 95,
+    "reviews": 50200,
+    "ratingAvg": 4.6,
+    "downloads": 6700000,
+    "ratings": [
+      { "name": "1 star", "count": 2300 },
+      { "name": "2 star", "count": 3100 },
+      { "name": "3 star", "count": 5100 },
+      { "name": "4 star", "count": 12800 },
+      { "name": "5 star", "count": 26900 }
+    ]
+  }
+]

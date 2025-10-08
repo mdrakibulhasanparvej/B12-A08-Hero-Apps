@@ -1,0 +1,75 @@
+import React, { useMemo, useState } from "react";
+import useApp from "../hooks/useApp";
+import { Link } from "react-router-dom";
+import AppsCard from "../component/AppsCard";
+import AppNotfound from "./AppNotfound";
+
+const Allapps = () => {
+  const { app, loading, error } = useApp();
+  const [search, setSearch] = useState("");
+
+  const term = useMemo(() => search.trim().toLocaleLowerCase(), [search]);
+  const searchedapp = useMemo(() => {
+    if (typeof term !== "string") {
+      return app;
+    } else {
+      return app.filter((product) =>
+        product.title.toLocaleLowerCase().includes(term)
+      );
+    }
+  }, [app, term]);
+
+  const handleGoBack = () => {
+    setSearch("");
+    window.history.back();
+  };
+  console.log(app);
+
+  return (
+    <div>
+      <section className="trending-app">
+        <div className="bg-white py-12 px-6 md:px-16">
+          <div className="max-w-7xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+              Our All Applications
+            </h2>
+            <p className="text-gray-500 mb-10">
+              Explore All Trending Apps on the Market developed by us.
+            </p>
+            <div>
+              <div className="p-6 flex justify-between ">
+                <h2 className="text-2xl font-bold">
+                  <span className="text-sm font-normal">
+                    ({searchedapp.length}) App Found
+                  </span>
+                </h2>
+                <label className="input">
+                  <input
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                    type="search"
+                    placeholder="search products"
+                  />
+                </label>
+              </div>
+            </div>
+
+            {searchedapp.length > 0 ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                {loading && <p>Loading apps...</p>}
+                {error && <p>Error loading apps.</p>}
+                {searchedapp?.map((item, index) => (
+                  <AppsCard key={index} item={item}></AppsCard>
+                ))}
+              </div>
+            ) : (
+              <AppNotfound handleGoBack={handleGoBack}></AppNotfound>
+            )}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Allapps;
