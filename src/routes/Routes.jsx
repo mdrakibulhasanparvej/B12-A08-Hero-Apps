@@ -5,7 +5,7 @@ import Allapps from "../pages/Allapps";
 import Installation from "../pages/Installation";
 import AppDetails from "../pages/AppDetails";
 import ErrorPage from "../pages/ErrorPage";
-import ErrorAppNotFound from "../pages/ErrorAppNotFound";
+import AppNotfound from "../pages/AppNotfound";
 
 const router = createBrowserRouter([
   {
@@ -31,7 +31,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/errorAppNotFound",
-        Component: ErrorAppNotFound,
+        Component: AppNotfound,
       },
     ],
   },

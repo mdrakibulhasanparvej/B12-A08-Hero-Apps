@@ -1,11 +1,12 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import useApp from "../hooks/useApp";
 import { Link } from "react-router-dom";
 import AppsCard from "../component/AppsCard";
 import AppNotfound from "./AppNotfound";
+import Loader from "../component/Loader";
 
 const Allapps = () => {
-  const { app, loading, error } = useApp();
+  const { app, loading, error, setLoading } = useApp();
   const [search, setSearch] = useState("");
 
   const term = useMemo(() => search.trim().toLocaleLowerCase(), [search]);
@@ -19,9 +20,24 @@ const Allapps = () => {
     }
   }, [app, term]);
 
+  useEffect(() => {
+    if (search) {
+      const timer = setTimeout(() => {
+        setLoading(false);
+      }, 300); // টাইপ করার 300ms পরে লোডিং বন্ধ
+
+      return () => clearTimeout(timer); // টাইপ থামার আগেই আগের টাইমার clear
+    } else {
+      setLoading(false); // search empty হলে সাথে সাথে লোডিং বন্ধ
+    }
+  }, [search, setLoading]);
+
   const handleGoBack = () => {
-    setSearch("");
-    window.history.back();
+    if (!setSearch("")) {
+      setSearch("");
+    } else {
+      window.history.back();
+    }
   };
   console.log(app);
 
@@ -46,17 +62,19 @@ const Allapps = () => {
                 <label className="input">
                   <input
                     value={search}
-                    onChange={(e) => setSearch(e.target.value)}
+                    onChange={(e) => {
+                      setSearch(e.target.value);
+                      setLoading(true);
+                    }}
                     type="search"
                     placeholder="search products"
                   />
                 </label>
               </div>
             </div>
-
-            {searchedapp.length > 0 ? (
+            {loading && <Loader></Loader>}
+            {searchedapp.length > 0 === !false ? (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                {loading && <p>Loading apps...</p>}
                 {error && <p>Error loading apps.</p>}
                 {searchedapp?.map((item, index) => (
                   <AppsCard key={index} item={item}></AppsCard>

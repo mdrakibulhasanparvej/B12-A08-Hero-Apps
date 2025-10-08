@@ -13,7 +13,7 @@ const useApp = () => {
       .catch((err) => setError(err))
       .finally(() => setLoading(false));
   }, []);
-  return{app,loading, error};
+  return { app, loading, error, setLoading };
 };
 
 export default useApp;
