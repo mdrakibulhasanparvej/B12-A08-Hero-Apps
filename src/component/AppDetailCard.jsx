@@ -1,9 +1,20 @@
-import React, { useState } from "react";
-import { addToInstallDB } from "../hooks/addToDB";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { addToInstallDB, getInstalledApp } from "../hooks/addToDB";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+  LabelList,
+} from "recharts";
 
 const AppDetailCard = ({ apps }) => {
   const { id } = useParams();
+  const [isInstalled, setIsInstalled] = useState(false);
+
   const {
     title,
     downloads,
@@ -16,22 +27,27 @@ const AppDetailCard = ({ apps }) => {
     ratings,
   } = apps;
 
-  const [toggle, setToggle] = useState();
+  useEffect(() => {
+    const storedInstallAppData = getInstalledApp();
+    const isAlreadyInstalled = storedInstallAppData.includes(parseInt(id));
+    setIsInstalled(isAlreadyInstalled);
+  }, [id]);
 
-  const addToInstalledList = (id) => {
-    addToInstallDB(id);
+  const addToInstalledList = () => {
+    addToInstallDB(parseInt(id));
+    setIsInstalled(true);
   };
 
   const formatLabel = (value) => {
     if (value >= 1_000_000_000) return "1B+";
     if (value >= 1_000_000) return "1M+";
     if (value >= 100_000) return "100K+";
-    return value.toLocaleString(); // fallback raw
+    return value.toLocaleString();
   };
 
   return (
     <div>
-      <div className="flex items-center justify-center gap-3  text-left p-4 border-b-2 border-gray-300 pb-3">
+      <div className="flex items-center justify-center gap-3 text-left p-4 border-b-2 border-gray-300 pb-3">
         <div className="w-1/5 flex justify-center items-center">
           <img
             className="pt-1 w-[220px] h-[220px] object-cover rounded-xl"
@@ -48,8 +64,7 @@ const AppDetailCard = ({ apps }) => {
             Developed by <span className="text-purple-600">{companyName}</span>
           </h3>
           <div className="flex items-center justify-start gap-8 mt-3 text-sm">
-            <h2 className=" font-bold flex flex-col items-start gap-2  p-1 ">
-              {" "}
+            <h2 className="font-bold flex flex-col items-start gap-2 p-1">
               <span>
                 <img
                   className="w-6"
@@ -60,8 +75,7 @@ const AppDetailCard = ({ apps }) => {
               <p className="text-sm">Download</p>
               <span className="text-lg">{formatLabel(downloads)}</span>
             </h2>
-            <h2 className=" font-bold flex flex-col items-start gap-2  p-1 ">
-              {" "}
+            <h2 className="font-bold flex flex-col items-start gap-2 p-1">
               <span>
                 <img
                   className="w-6"
@@ -72,8 +86,7 @@ const AppDetailCard = ({ apps }) => {
               <p className="text-sm">Rating</p>
               <span className="text-lg">{ratingAvg}</span>
             </h2>
-            <h2 className=" font-bold flex flex-col items-start gap-2  p-1 ">
-              {" "}
+            <h2 className="font-bold flex flex-col items-start gap-2 p-1">
               <span>
                 <img
                   className="w-6"
@@ -85,24 +98,43 @@ const AppDetailCard = ({ apps }) => {
               <span className="text-lg">{reviews}</span>
             </h2>
           </div>
-          <div>
-            <button onClick={() => addToInstalledList(id)} className="btn">
-              install Now ({size}MB)
+          <div className="mt-4">
+            <button
+              onClick={addToInstalledList}
+              disabled={isInstalled}
+              className={`btn ${isInstalled ? "bg-gray-400 cursor-not-allowed" : ""}`}
+            >
+              {isInstalled ? "Installed" : `Install Now (${size}MB)`}
             </button>
           </div>
         </div>
       </div>
-      <div>
-        <h2>
-          Ratings:{" "}
-          {ratings.map((a) => (
-            <p>Name: {a.name}</p>
-          ))}
-        </h2>
+
+      {/* ✅ Ratings Chart Section */}
+      <div className="mt-8 px-4">
+        <h3 className="text-xl font-semibold mb-4">Ratings Breakdown</h3>
+        <div className="bg-white p-4 rounded-lg shadow-sm">
+          <ResponsiveContainer width="100%" height={250}>
+            <BarChart
+              data={ratings}
+              layout="vertical"
+              margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+            >
+              <XAxis type="number" hide />
+              <YAxis type="category" dataKey="name" width={80} />
+              <Tooltip />
+              <Bar dataKey="count" fill="#7C3AED" radius={[0, 4, 4, 0]}>
+                <LabelList dataKey="count" position="right" />
+              </Bar>
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
       </div>
 
-      <div>
-        <p>{description}</p>
+      {/* ✅ Description Section */}
+      <div className="mt-8 px-4">
+        <h3 className="text-xl font-semibold mb-2">Description</h3>
+        <p className="text-gray-700 leading-relaxed">{description}</p>
       </div>
     </div>
   );

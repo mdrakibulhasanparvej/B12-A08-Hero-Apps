@@ -19,10 +19,26 @@ const Installation = () => {
   if (error) return <p>Error.....</p>;
 
   return (
-    <div >
+    <div>
+      <div className="max-w-7xl mx-auto text-center pt-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+          Our All Applications
+        </h2>
+        <p className="text-gray-500 mb-10">
+          Explore All Trending Apps on the Market developed by us.
+        </p>
+        <div className="p-6 flex justify-between ">
+          <h2 className="text-2xl font-bold">
+            <span className="text-sm font-normal">
+              {installLists.length} App Found
+            </span>
+          </h2>
+          <label className="input"></label>
+        </div>
+      </div>
       {installLists.map((installList) => (
         <InstalledOneAppDetails
-          key={installLists.id}
+          key={installList.id}
           installList={installList}
         ></InstalledOneAppDetails>
       ))}

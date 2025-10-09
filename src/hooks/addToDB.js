@@ -1,22 +1,31 @@
+// ✅ Get installed apps from localStorage
 const getInstalledApp = () => {
   const storedInstallApp = localStorage.getItem("installed");
   if (storedInstallApp) {
-    const storedInstallAppData = JSON.parse(storedInstallApp);
-    return storedInstallAppData;
+    return JSON.parse(storedInstallApp);
   } else {
     return [];
   }
 };
 
+// ✅ Add app ID to installed list
 const addToInstallDB = (id) => {
-  console.log(id);
   const storedInstallAppData = getInstalledApp();
-  if (storedInstallAppData.includes(id)) {
-    return;
-  } else {
-    storedInstallAppData.push(id);
+  const numericId = parseInt(id);
+  if (!storedInstallAppData.includes(numericId)) {
+    storedInstallAppData.push(numericId);
     localStorage.setItem("installed", JSON.stringify(storedInstallAppData));
   }
 };
 
-export { addToInstallDB, getInstalledApp };
+// ✅ Remove app ID from installed list
+const removeFromInstallDB = (id) => {
+  const storedInstallAppData = getInstalledApp();
+  const numericId = parseInt(id);
+  const updatedApps = storedInstallAppData.filter(
+    (appId) => parseInt(appId) !== numericId
+  );
+  localStorage.setItem("installed", JSON.stringify(updatedApps));
+};
+
+export { addToInstallDB, getInstalledApp, removeFromInstallDB };
