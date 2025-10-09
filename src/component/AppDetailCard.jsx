@@ -33,7 +33,7 @@ const AppDetailCard = ({ apps }) => {
     setIsInstalled(isAlreadyInstalled);
   }, [id]);
 
-  const addToInstalledList = () => {
+  const addToInstalledList = (id) => {
     addToInstallDB(parseInt(id));
     setIsInstalled(true);
   };
@@ -44,6 +44,13 @@ const AppDetailCard = ({ apps }) => {
     if (value >= 100_000) return "100K+";
     return value.toLocaleString();
   };
+
+  //  Sort ratings descending by star
+  const sortedRatings = [...ratings].sort((a, b) => {
+    const starA = parseInt(a.name); // "5 star" → 5
+    const starB = parseInt(b.name);
+    return starB - starA;
+  });
 
   return (
     <div>
@@ -100,7 +107,7 @@ const AppDetailCard = ({ apps }) => {
           </div>
           <div className="mt-4">
             <button
-              onClick={addToInstalledList}
+              onClick={() => addToInstalledList(id)}
               disabled={isInstalled}
               className={`btn ${isInstalled ? "bg-gray-400 cursor-not-allowed" : ""}`}
             >
@@ -110,13 +117,13 @@ const AppDetailCard = ({ apps }) => {
         </div>
       </div>
 
-      {/* ✅ Ratings Chart Section */}
+      {/* Ratings Chart Section */}
       <div className="mt-8 px-4">
         <h3 className="text-xl font-semibold mb-4">Ratings Breakdown</h3>
         <div className="bg-white p-4 rounded-lg shadow-sm">
           <ResponsiveContainer width="100%" height={250}>
             <BarChart
-              data={ratings}
+              data={sortedRatings}
               layout="vertical"
               margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
             >
@@ -131,7 +138,7 @@ const AppDetailCard = ({ apps }) => {
         </div>
       </div>
 
-      {/* ✅ Description Section */}
+      {/* Description Section */}
       <div className="mt-8 px-4">
         <h3 className="text-xl font-semibold mb-2">Description</h3>
         <p className="text-gray-700 leading-relaxed">{description}</p>

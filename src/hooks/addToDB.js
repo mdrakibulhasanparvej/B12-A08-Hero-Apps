@@ -1,4 +1,4 @@
-// ✅ Get installed apps from localStorage
+//  Get installed apps from localStorage
 const getInstalledApp = () => {
   const storedInstallApp = localStorage.getItem("installed");
   if (storedInstallApp) {
@@ -8,7 +8,7 @@ const getInstalledApp = () => {
   }
 };
 
-// ✅ Add app ID to installed list
+//  Add app ID to installed list
 const addToInstallDB = (id) => {
   const storedInstallAppData = getInstalledApp();
   const numericId = parseInt(id);
@@ -18,7 +18,7 @@ const addToInstallDB = (id) => {
   }
 };
 
-// ✅ Remove app ID from installed list
+//  Remove app ID from installed list
 const removeFromInstallDB = (id) => {
   const storedInstallAppData = getInstalledApp();
   const numericId = parseInt(id);

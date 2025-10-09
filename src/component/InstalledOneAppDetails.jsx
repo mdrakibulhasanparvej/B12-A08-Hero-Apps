@@ -2,7 +2,7 @@ import React from "react";
 import { removeFromInstallDB } from "../hooks/addToDB";
 
 const InstalledOneAppDetails = ({ installList }) => {
-  const { id, title, downloads, ratingAvg, image, companyName, reviews, size } =
+  const { id, title, downloads, ratingAvg, image, companyName, reviews } =
     installList;
 
   const handleUninstall = (id) => {
