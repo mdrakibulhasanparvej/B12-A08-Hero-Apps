@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useApp from "../hooks/useApp";
 import InstalledOneAppDetails from "../component/InstalledOneAppDetails";
-import { getInstalledApp } from "../hooks/addToDB";
+import { getInstalledApp, removeFromInstallDB } from "../hooks/addToDB";
 import Loader from "../component/Loader";
 
 const Installation = () => {
@@ -16,7 +16,12 @@ const Installation = () => {
     setInstallList(myinstallList);
   }, [app]);
 
+  const handleUninstall = (id) => {
+    removeFromInstallDB(id);
+    setInstallList((prev) => prev.filter((app) => app.id !== id));
+  };
   if (loading) return <Loader></Loader>;
+
   const handSort = (type) => {
     setSort(type);
     if (type === "High-Low") {
@@ -72,6 +77,7 @@ const Installation = () => {
         <InstalledOneAppDetails
           key={installList.id}
           installList={installList}
+          isUninstall={handleUninstall}
         ></InstalledOneAppDetails>
       ))}
     </div>

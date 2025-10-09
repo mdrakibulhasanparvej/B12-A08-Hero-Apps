@@ -109,9 +109,13 @@ const AppDetailCard = ({ apps }) => {
             <button
               onClick={() => addToInstalledList(id)}
               disabled={isInstalled}
-              className={`btn ${isInstalled ? "bg-gray-400 cursor-not-allowed" : ""}`}
+              className={`btn transition-all duration-300 ${
+                isInstalled
+                  ? "bg-green-800 cursor-not-allowed"
+                  : "bg-green-600 hover:bg-green-800 text-white"
+              }`}
             >
-              {isInstalled ? "Installed" : `Install Now (${size}MB)`}
+              {isInstalled ? "✅ Installed" : `Install Now (${size}MB)`}
             </button>
           </div>
         </div>

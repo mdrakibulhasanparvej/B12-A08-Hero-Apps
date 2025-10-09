@@ -1,13 +1,12 @@
 import React from "react";
 import { removeFromInstallDB } from "../hooks/addToDB";
 
-const InstalledOneAppDetails = ({ installList }) => {
+const InstalledOneAppDetails = ({ installList, isUninstall }) => {
   const { id, title, downloads, ratingAvg, image, companyName, reviews } =
     installList;
 
-  const handleUninstall = (id) => {
-    removeFromInstallDB(id);
-    window.location.reload();
+  const isHandleUninstall = (id) => {
+    isUninstall(id);
   };
 
   const formatLabel = (value) => {
@@ -79,8 +78,8 @@ const InstalledOneAppDetails = ({ installList }) => {
             {/* Install Button */}
             <div className="mt-4">
               <button
-                onClick={() => handleUninstall(id)}
-                className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md transition"
+                onClick={() => isHandleUninstall(id)}
+                className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md transition"
               >
                 Uninstall
               </button>
