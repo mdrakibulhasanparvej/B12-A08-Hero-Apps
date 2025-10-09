@@ -1,5 +1,13 @@
 import { motion } from "framer-motion";
 import { fadeUp } from "../hooks/fadeUpMotion";
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  MessageSquareHeart,
+  Twitter,
+  Youtube,
+} from "lucide-react";
 
 const Footer = () => {
   return (
@@ -86,7 +94,7 @@ const Footer = () => {
           </h3>
           <p className="text-sm text-gray-400">Subscribe to our newsletter</p>
         </div>
-        <form className="flex gap-2">
+        <div className="flex gap-2">
           <input
             type="email"
             placeholder="Enter your email"
@@ -95,48 +103,24 @@ const Footer = () => {
           <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">
             Sign Up
           </button>
-        </form>
+        </div>
       </div>
 
       {/* Social Media & Payment Icons */}
       <div className="mt-10 flex flex-col lg:flex-row justify-between items-center gap-6 border-t border-gray-700 pt-6">
         {/* Social Icons */}
         <div className="flex gap-4">
-          {[
-            "facebook",
-            "instagram",
-            "youtube",
-            "linkedin",
-            "pinterest",
-            "tiktok",
-          ].map((platform) => (
-            <a key={platform} href="#" aria-label={platform}>
-              <img
-                src={`/icons/${platform}.svg`}
-                alt={platform}
-                className="h-6 w-6 hover:opacity-80"
-              />
-            </a>
-          ))}
+          <Facebook />
+          <Instagram />
+          <Twitter />
+          <Linkedin />
+          <Youtube />
+          <MessageSquareHeart />
         </div>
 
         {/* Payment Icons */}
         <div className="flex gap-4">
-          {[
-            "visa",
-            "mastercard",
-            "amex",
-            "paypal",
-            "applepay",
-            "googlepay",
-          ].map((method) => (
-            <img
-              key={method}
-              src={`/payments/${method}.svg`}
-              alt={method}
-              className="h-6 w-10 object-contain"
-            />
-          ))}
+          <img src="/public/SSL-commerz.webp" alt="" />
         </div>
       </div>
 
