@@ -14,8 +14,10 @@ const InstalledOneAppDetails = ({ installList }) => {
     if (value >= 1_000_000_000) return "1B+";
     if (value >= 1_000_000) return "1M+";
     if (value >= 100_000) return "100K+";
+    if (value >= 10_000) return "10K+";
     return value.toLocaleString(); // fallback raw
   };
+
   return (
     <div>
       <div className="border-2 border-gray-200 m-6 flex flex-col lg:flex-row gap-6 p-4 bg-white rounded-xl shadow-md">
@@ -70,7 +72,7 @@ const InstalledOneAppDetails = ({ installList }) => {
                     alt="Review Icon"
                   />
                   <p>Reviews</p>
-                  <span className="text-lg">{reviews}</span>
+                  <span className="text-lg">{formatLabel(reviews)}</span>
                 </div>
               </div>
             </div>

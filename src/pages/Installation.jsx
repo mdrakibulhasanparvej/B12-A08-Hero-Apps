@@ -7,6 +7,7 @@ import Loader from "../component/Loader";
 const Installation = () => {
   const { app, loading, error } = useApp();
   const [installLists, setInstallList] = useState([]);
+  const [sort, setSort] = useState("");
 
   useEffect(() => {
     const storedInstallAppData = getInstalledApp();
@@ -16,24 +17,55 @@ const Installation = () => {
   }, [app]);
 
   if (loading) return <Loader></Loader>;
+  const handSort = (type) => {
+    setSort(type);
+    if (type === "High-Low") {
+      const sortByprice = [...installLists].sort(
+        (a, b) => b.downloads - a.downloads
+      );
+      setInstallList(sortByprice);
+    }
+    if (type === "Low-High") {
+      const sortByprice = [...installLists].sort(
+        (a, b) => a.downloads - b.downloads
+      );
+      setInstallList(sortByprice);
+    }
+  };
+
   if (error) return <p>Error.....</p>;
 
+  console.log(installLists);
   return (
     <div>
       <div className="max-w-7xl mx-auto text-center pt-12">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
-          Our All Applications
+          Your Installed Apps
         </h2>
-        <p className="text-gray-500 mb-10">
-          Explore All Trending Apps on the Market developed by us.
-        </p>
-        <div className="p-6 flex justify-between ">
-          <h2 className="text-2xl font-bold">
-            <span className="text-sm font-normal">
-              {installLists.length} App Found
-            </span>
-          </h2>
-          <label className="input"></label>
+        <div className="flex justify-between ">
+          <div className="p-6 ">
+            <h2 className="text-2xl font-bold">
+              <span className="text-sm font-normal">
+                {installLists.length} App Found
+              </span>
+            </h2>
+          </div>
+          <div className="dropdown dropdown-end px-6">
+            <div tabIndex={0} role="button" className="btn m-1">
+              {sort ? "Sorted" : "Sort"} By {sort ? `-> ${sort}` : ""}
+            </div>
+            <ul
+              tabIndex={0}
+              className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
+            >
+              <li>
+                <a onClick={() => handSort("High-Low")}>High-Low</a>
+              </li>
+              <li>
+                <a onClick={() => handSort("Low-High")}>Low-High</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       {installLists.map((installList) => (
