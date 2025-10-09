@@ -21,7 +21,7 @@ const AppDetails = () => {
           <div className="max-w-7xl mx-auto text-center">
             <div className="">
               {apps ? (
-                <AppDetailCard apps={apps}></AppDetailCard>
+                <AppDetailCard key={apps.id} apps={apps}></AppDetailCard>
               ) : (
                 <AppNotfound></AppNotfound>
               )}

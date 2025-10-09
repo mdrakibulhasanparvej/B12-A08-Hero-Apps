@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import { addToInstallDB } from "../hooks/addToDB";
+import { useParams } from "react-router-dom";
 
 const AppDetailCard = ({ apps }) => {
+  const { id } = useParams();
   const {
-    id,
     title,
     downloads,
     ratingAvg,
@@ -13,13 +15,20 @@ const AppDetailCard = ({ apps }) => {
     description,
     ratings,
   } = apps;
+
+  const [toggle, setToggle] = useState();
+
+  const addToInstalledList = (id) => {
+    addToInstallDB(id);
+  };
+
   const formatLabel = (value) => {
     if (value >= 1_000_000_000) return "1B+";
     if (value >= 1_000_000) return "1M+";
     if (value >= 100_000) return "100K+";
     return value.toLocaleString(); // fallback raw
   };
-  console.log(apps);
+
   return (
     <div>
       <div className="flex items-center justify-center gap-3  text-left p-4 border-b-2 border-gray-300 pb-3">
@@ -77,7 +86,9 @@ const AppDetailCard = ({ apps }) => {
             </h2>
           </div>
           <div>
-            <button className="btn">install Now ({size}MB)</button>
+            <button onClick={() => addToInstalledList(id)} className="btn">
+              install Now ({size}MB)
+            </button>
           </div>
         </div>
       </div>
