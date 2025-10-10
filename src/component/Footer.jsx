@@ -39,9 +39,6 @@ const Footer = () => {
           <h2 className="text-lg font-semibold mb-2">
             Get great features with your free account
           </h2>
-          <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">
-            Create account now
-          </button>
         </div>
 
         {/* Link Sections */}
