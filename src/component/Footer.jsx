@@ -94,13 +94,13 @@ const Footer = () => {
           </h3>
           <p className="text-sm text-gray-400">Subscribe to our newsletter</p>
         </div>
-        <div className="flex gap-2">
+        <div className="flex gap-3 ">
           <input
             type="email"
             placeholder="Enter your email"
             className="px-4 py-2 rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500"
           />
-          <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">
+          <button className="bg-green-500 hover:bg-green-600 text-white w-20 md:w-25 px-2 md:px-4 py-2 rounded">
             Sign Up
           </button>
         </div>
@@ -120,7 +120,7 @@ const Footer = () => {
 
         {/* Payment Icons */}
         <div className="flex gap-4">
-          <img src="/public/SSL-commerz.webp" alt="" />
+          <img src="/SSL-commerz.webp" alt="" />
         </div>
       </div>
 

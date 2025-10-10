@@ -44,17 +44,17 @@ const Allapps = () => {
   return (
     <div>
       <section className="trending-app">
-        <div className="bg-white py-12 px-6 md:px-16">
+        <div className="bg-white md:py-12 px-6 md:px-16">
           <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+            <h2 className="text-3xl pt-10 md:pt-5 md:text-4xl font-bold text-gray-800 mb-2">
               Our All Applications
             </h2>
-            <p className="text-gray-500 mb-10">
+            <p className="text-gray-500">
               Explore All Trending Apps on the Market developed by us.
             </p>
             <div>
-              <div className="p-6 flex justify-between ">
-                <h2 className="text-2xl font-bold">
+              <div className="py-10 flex flex-col md:flex-row items-center justify-between ">
+                <h2 className="text-2xl font-bold mb-5 md:mb-0">
                   <span className="text-sm font-normal">
                     ({searchedapp.length}) App Found
                   </span>
@@ -67,22 +67,24 @@ const Allapps = () => {
                       setLoading(true);
                     }}
                     type="search"
-                    placeholder="search products"
+                    placeholder="Search Apps"
                   />
                 </label>
               </div>
             </div>
-            {loading && <Loader></Loader>}
-            {searchedapp.length > 0 === !false ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                {error && <p>Error loading apps.</p>}
-                {searchedapp?.map((item, index) => (
-                  <AppsCard key={index} item={item}></AppsCard>
-                ))}
-              </div>
-            ) : (
-              <AppNotfound handleGoBack={handleGoBack}></AppNotfound>
-            )}
+            <div className="py-6">
+              {loading && <Loader></Loader>}
+              {searchedapp.length > 0 === !false ? (
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                  {error && <p>Error loading apps.</p>}
+                  {searchedapp?.map((item, index) => (
+                    <AppsCard key={index} item={item}></AppsCard>
+                  ))}
+                </div>
+              ) : (
+                <AppNotfound handleGoBack={handleGoBack}></AppNotfound>
+              )}
+            </div>
           </div>
         </div>
       </section>

@@ -40,14 +40,13 @@ const Installation = () => {
 
   if (error) return <p>Error.....</p>;
 
-  console.log(installLists);
   return (
     <div>
       <div className="max-w-7xl mx-auto text-center pt-12">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
           Your Installed Apps
         </h2>
-        <div className="flex justify-between ">
+        <div className="flex items-center justify-between ">
           <div className="p-6 ">
             <h2 className="text-2xl font-bold">
               <span className="text-sm font-normal">

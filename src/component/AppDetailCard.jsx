@@ -27,6 +27,7 @@ const AppDetailCard = ({ apps }) => {
     ratings,
   } = apps;
 
+  console.log(description);
   useEffect(() => {
     const storedInstallAppData = getInstalledApp();
     const isAlreadyInstalled = storedInstallAppData.includes(parseInt(id));
@@ -54,8 +55,8 @@ const AppDetailCard = ({ apps }) => {
 
   return (
     <div>
-      <div className="flex items-center justify-center gap-3 text-left p-4 border-b-2 border-gray-300 pb-3">
-        <div className="w-1/5 flex justify-center items-center">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-3 text-left p-4">
+        <div className="w-full md:w-2/5 lg:w-1/5 flex justify-center items-center mb-4">
           <img
             className="pt-1 w-[220px] h-[220px] object-cover rounded-xl"
             src={image}
@@ -63,7 +64,7 @@ const AppDetailCard = ({ apps }) => {
           />
         </div>
 
-        <div className="w-4/5">
+        <div className="w-full md:w-3/5 lg:w-4/5">
           <h3 className="text-2xl font-semibold text-gray-800">
             Title: {title}
           </h3>
@@ -105,7 +106,7 @@ const AppDetailCard = ({ apps }) => {
               <span className="text-lg">{reviews}</span>
             </h2>
           </div>
-          <div className="mt-4">
+          <div className="mt-4 border-b-2 border-gray-300 pb-3">
             <button
               onClick={() => addToInstalledList(id)}
               disabled={isInstalled}
@@ -122,14 +123,16 @@ const AppDetailCard = ({ apps }) => {
       </div>
 
       {/* Ratings Chart Section */}
-      <div className="mt-8 px-4">
-        <h3 className="text-xl font-semibold mb-4">Ratings Breakdown</h3>
-        <div className="bg-white p-4 rounded-lg shadow-sm">
+      <div className="mt-8 px-2 md:px-4">
+        <h3 className="text-xl text-left font-semibold mb-4">
+          Ratings Breakdown
+        </h3>
+        <div className="bg-white  rounded-lg ">
           <ResponsiveContainer width="100%" height={250}>
             <BarChart
               data={sortedRatings}
               layout="vertical"
-              margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+              margin={{ top: 5, right: 20, left: 20, bottom: 5 }}
             >
               <XAxis type="number" hide />
               <YAxis type="category" dataKey="name" width={80} />
@@ -144,8 +147,10 @@ const AppDetailCard = ({ apps }) => {
 
       {/* Description Section */}
       <div className="mt-8 px-4">
-        <h3 className="text-xl font-semibold mb-2">Description</h3>
-        <p className="text-gray-700 leading-relaxed">{description}</p>
+        <h3 className="text-left text-xl font-semibold mb-2">Description</h3>
+        {description.map((des) => (
+          <p className="text-justify py-3">{des}</p>
+        ))}
       </div>
     </div>
   );

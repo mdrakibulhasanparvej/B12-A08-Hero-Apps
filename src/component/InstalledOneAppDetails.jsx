@@ -1,5 +1,4 @@
 import React from "react";
-import { removeFromInstallDB } from "../hooks/addToDB";
 
 const InstalledOneAppDetails = ({ installList, isUninstall }) => {
   const { id, title, downloads, ratingAvg, image, companyName, reviews } =
@@ -19,7 +18,7 @@ const InstalledOneAppDetails = ({ installList, isUninstall }) => {
 
   return (
     <div>
-      <div className="border-2 border-gray-200 m-6 flex flex-col lg:flex-row gap-6 p-4 bg-white rounded-xl shadow-md">
+      <div className="border-2 border-gray-200 m-6 flex flex-col md:flex-row gap-6 p-4 bg-white rounded-xl shadow-md">
         {/* Image Section */}
         <div className="flex justify-center items-center lg:w-1/5 w-full">
           <img

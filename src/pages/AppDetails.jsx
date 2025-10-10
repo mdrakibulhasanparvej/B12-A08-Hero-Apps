@@ -16,7 +16,7 @@ const AppDetails = () => {
 
   return (
     <div>
-      <section className="trending-app">
+      <div className="trending-app">
         <div className="bg-white py-12 px-6 md:px-16">
           <div className="max-w-7xl mx-auto text-center">
             <div className="">
@@ -28,7 +28,7 @@ const AppDetails = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 };
