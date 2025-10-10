@@ -116,7 +116,7 @@ const AppDetailCard = ({ apps }) => {
                   : "bg-green-600 hover:bg-green-800 text-white"
               }`}
             >
-              {isInstalled ? "✅ Installed" : `Install Now (${size}MB)`}
+              {isInstalled ? "Installed" : `Install Now (${size}MB)`}
             </button>
           </div>
         </div>
