@@ -57,7 +57,7 @@ const Home = () => {
             Our goal is to turn your ideas into digital experiences that truly
             make an impact.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center pb-10">
+          <div className="flex flex-col items-center sm:flex-row gap-4 sm:gap-5 justify-center pb-10">
             <a target="_blank" href="https://play.google.com/store/games?hl=en">
               <button className="btn flex items-center gap-2 px-4 py-2 text-sm sm:text-base">
                 <img className="w-5" src="/play_store.png" alt="Play Store" />
