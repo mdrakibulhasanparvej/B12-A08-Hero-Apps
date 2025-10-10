@@ -1,16 +1,26 @@
-# React + Vite
+# HERO.IO
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+At HERO.IO , we craft innovative apps designed to make everyday life simpler, smarter, and more exciting.Our goal is to turn your ideas into digital experiences that truly make an impact.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+@hookform/resolvers: 5.2.2,
+@tailwindcss/vite: 4.1.14,
+axios: 1.12.2,
+daisyui: 5.1.28,
+framer-motion: 12.23.22,
+lucide-react: 0.545.0,
+prettier: 3.6.2,
+react: 19.1.1,
+react-dom: 19.1.1,
+react-hook-form: 7.64.0,
+react-router-dom: 7.9.3,
+react-simple-typewriter: 5.0.1,
+recharts: 3.2.1,
+sweetalert2: 11.25.0,
+sweetalert2-react-content: 5.1.0,
+tailwindcss: 4.1.14,
+typewriter-effect: 2.22.0,
+yup: 1.7.1
