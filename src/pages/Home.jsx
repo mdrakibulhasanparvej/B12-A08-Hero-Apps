@@ -13,14 +13,14 @@ const Home = () => {
     {
       title: "Total Downloads",
       value: "29.6M",
-      note: "⬆ 21% More Than Last Month",
+      note: "21% More Than Last Month",
     },
     {
       title: "Total Reviews",
       value: "906K",
-      note: "⬆ 46% More Than Last Month",
+      note: "46% More Than Last Month",
     },
-    { title: "Active Apps", value: "132+", note: "🚀 31 More Will Launch" },
+    { title: "Active Apps", value: "132+", note: " 31 More Will Launch" },
   ];
 
   const { app, loading, error } = useApp();

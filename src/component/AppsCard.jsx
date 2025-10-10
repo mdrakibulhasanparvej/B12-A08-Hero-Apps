@@ -20,7 +20,7 @@ const AppsCard = ({ item }) => {
             alt=""
           />
         </div>
-        <h3 className="text-lg font-semibold text-gray-800">Title: {title}</h3>
+        <h3 className="text-lg font-semibold text-gray-800">{title}</h3>
         <div className="flex items-center justify-between gap-3 mt-3 text-sm">
           <h2 className="text-green-600 font-bold flex gap-2 shadow-sm bg-gray-200 p-1 rounded-sm">
             {" "}
