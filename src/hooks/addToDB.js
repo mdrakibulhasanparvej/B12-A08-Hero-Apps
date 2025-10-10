@@ -24,17 +24,17 @@ const addToInstallDB = (id) => {
     // SweetAlert: ইনস্টল সফল হয়েছে
     MySwal.fire({
       icon: "success",
-      title: "অ্যাপ ইনস্টল হয়েছে!",
-      text: `অ্যাপ ID ${numericId} সফলভাবে ইনস্টল হয়েছে।`,
-      confirmButtonText: "ঠিক আছে",
+      title: "APP Installed",
+      text: `APP ID ${numericId} Successfully Installed`,
+      confirmButtonText: "Ok",
     });
   } else {
     //  SweetAlert: আগেই ইনস্টল করা আছে
     MySwal.fire({
       icon: "info",
-      title: "ইনস্টল করা আছে",
-      text: `অ্যাপ ID ${numericId} আগেই ইনস্টল করা হয়েছে।`,
-      confirmButtonText: "ঠিক আছে",
+      title: "Already Installed!",
+      text: `APP ID ${numericId} Already installed।`,
+      confirmButtonText: "Ok",
     });
   }
 };
@@ -51,9 +51,9 @@ const removeFromInstallDB = (id) => {
   // SweetAlert: ইউজার OK না চাপা পর্যন্ত wait করবে
   MySwal.fire({
     icon: "warning",
-    title: "অ্যাপ আনইনস্টল হয়েছে",
-    text: `অ্যাপ ID ${numericId} সফলভাবে মুছে ফেলা হয়েছে।`,
-    confirmButtonText: "ঠিক আছে",
+    title: "App uninstalled.",
+    text: `App ID ${numericId} Deleted successfully.`,
+    confirmButtonText: "Ok",
   });
 };
 
