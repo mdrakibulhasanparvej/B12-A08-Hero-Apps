@@ -1,4 +1,4 @@
-import { Github } from "lucide-react";
+import { Github, House } from "lucide-react";
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 
@@ -56,7 +56,7 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <NavLink to={"/"}>Home</NavLink>
+              <NavLink to={"/"}> Home</NavLink>
             </li>
             <li>
               <NavLink to={"/allapps"}>Apps</NavLink>
