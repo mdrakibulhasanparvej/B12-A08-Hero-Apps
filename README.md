@@ -1,8 +1,10 @@
-# HERO.IO
+# HERO.IO Apps – Project Overview
 
 ## Description
 
-At HERO.IO , we craft innovative apps designed to make everyday life simpler, smarter, and more exciting.Our goal is to turn your ideas into digital experiences that truly make an impact.
+At HERO.IO, we craft innovative and smart applications designed to make everyday life simpler, more efficient, and more exciting. Our mission is to transform your ideas into impactful digital experiences.
+
+This project is a modern, high-performance application built using React and Vite. The UI is crafted with TailwindCSS and DaisyUI to ensure a clean, responsive, and visually appealing design. It includes routing, form handling, animations, charts, and various dynamic features that enhance user experience.
 
 ---
 
@@ -18,7 +20,17 @@ At HERO.IO , we craft innovative apps designed to make everyday life simpler, 
 
 ---
 
-## Technologies
+## Main Features
+- Modern and responsive UI
+- Full client-side routing (React Router v7)
+- Advanced form validation with React Hook Form + Yup
+- Beautiful data visualization with Recharts
+- Optimized build performance using Vite
+- Smooth animations powered by Framer Motion
+- Toast and alert notifications
+- API handling with Axios
+
+## Dependencies
 
 - @hookform/resolvers: 5.2.2,
 - @tailwindcss/vite: 4.1.14,
@@ -38,3 +50,5 @@ At HERO.IO , we craft innovative apps designed to make everyday life simpler, 
 - tailwindcss: 4.1.14,
 - typewriter-effect: 2.22.0,
 - yup: 1.7.1
+
+  
