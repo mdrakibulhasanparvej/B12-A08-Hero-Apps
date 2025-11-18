@@ -4,6 +4,20 @@
 
 At HERO.IO , we craft innovative apps designed to make everyday life simpler, smarter, and more exciting.Our goal is to turn your ideas into digital experiences that truly make an impact.
 
+---
+
+## Technologies Used
+
+| Category            | Technologies                                                        |
+| ------------------- | ------------------------------------------------------------------- |
+| **Frontend**        | React.js, Tailwind CSS, DaisyUI, Framer Motion, Swiper.js,          |
+| **Backend**         | Node.js, Express.js, MongoDB                                        |
+| **Authentication**  | Firebase Auth                                                       |
+| **Hosting**         | Firebase Hosting (Client), Vercel (Server)                          |
+| **UI Enhancements** | Framer Motion, SweetAlert2, React Toastify                          |
+
+---
+
 ## Technologies
 
 - @hookform/resolvers: 5.2.2,
